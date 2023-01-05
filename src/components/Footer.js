@@ -1,0 +1,157 @@
+import React, { useState } from "react";
+import "./Footer.css";
+import axios from "axios";
+import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
+
+const contactUrl = "http://localhost:4000/contact";
+
+function Footer() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [alert, setAlert] = useState(null);
+  const { t } = useTranslation();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    if (email.trim() === "" || name.trim() === "" || message.trim() === "") {
+      return;
+    }
+    setAlert(null);
+    /* const requestConfig = {
+      headers: {
+        "x-api-key": "6pmXxWRCYh2XDWyHHBtgZ4becVR31hCLaBG1xs6a",
+      },
+    };*/
+    const requestBody = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    axios
+      .post(contactUrl, requestBody)
+      .then((response) => {
+        setAlert("");
+      })
+      .catch((error) => {
+        if (
+          error.response.data.status === 401 ||
+          error.response.data.status === 403
+        ) {
+          setAlert(error.response.data.message);
+        } else {
+          setAlert(error.response.data.message);
+        }
+      });
+  };
+
+  return (
+    <div className="footer-container" id="footer">
+      <div class="footer-links">
+        <form onSubmit={submitHandler} className="input-areas">
+          <p className="footer-subscription-text"> {t("app.contactUs")}</p>
+          <div className="footer-line"></div>
+          <input
+            className="footer-input"
+            name="name"
+            type="text"
+            placeholder={t("app.yourName")}
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+          <div className="footer-line"></div>
+          <input
+            className="footer-input"
+            name="email"
+            type="email"
+            placeholder={t("app.yourEmail")}
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <div className="footer-line"></div>
+          <input
+            className="footer-input"
+            name="message"
+            type="text"
+            placeholder={t("app.yourMessage")}
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+          />
+          <div className="footer-line"></div>
+          <input
+            type="submit"
+            className="footer-button"
+            placeholder={t("app.send")}
+          />
+        </form>
+        {alert && <p className="message">{alert}</p>}
+
+        <div class="footer-link-items">
+          <h2> a</h2>
+          <div className="footer-line-item"></div>
+
+          <Link
+            to="service"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            <p>{t("app.services")}</p>
+          </Link>
+          <Link to="about" spy={true} smooth={true} offset={-80} duration={500}>
+            <p>{t("app.about")}</p>
+          </Link>
+          <Link
+            to="footer"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <p>{t("app.contact")}</p>
+          </Link>
+        </div>
+        <div class="footer-link-items">
+          <h2 className="footer-link-title">
+            <p>{t("app.socialMedia")}</p>
+          </h2>
+          <div className="footer-line-item"></div>
+          <div class="social-icons">
+            <a
+              className="social-icon-link linkedin"
+              href="https://www.linkedin.com/company/appelier-yaz%C4%B1l%C4%B1m-ve-dan%C4%B1%C5%9Fmanl%C4%B1k-hizmetleri-ltd-%C5%9Fti/"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              className="social-icon-link twitter"
+              href="https://twitter.com/Appelier3"
+            >
+              <i class="fab fa-twitter" />
+            </a>
+            <a
+              className="social-icon-link instagram"
+              href="https://www.instagram.com/appelier_tr/"
+            >
+              <i class="fab fa-instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <p> 0232 520 33 29 </p>
+        <p>Çınarlı Mahallesi 1572 Sokak No:33</p>
+        <p>
+          Withco Co-Working Space Ofis No: 319 PK.35170 Konak, İzmir, Türkiye
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default Footer;

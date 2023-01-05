@@ -1,0 +1,19 @@
+{
+  "app.home": "Anasayfa",
+  "app.services": "Hizmetlerimiz",
+  "app.about": "Hakkımızda",
+  "app.aboutDesc": " 2016 yılında İzmir'de kurulan şirketimiz Mühendislik ve Yazılım alanlarında siz müşterilerimize hizmet vermektedir. Bu alanlardan biri olan Mobil Uygulama Hizmetlerini ise artık yeni markamız APPELİER ile sürdürmekteyiz. Projelerimizi alanında uzman takım arkadaşlarımızla birlikte büyük bir özveri ve tutku ile yürütüyor ve size en iyi hizmeti vermeyi amaçlıyoruz.",
+  "app.send": "Gönder",
+  "app.yourName": "İsminiz",
+  "app.yourEmail": "Email",
+  "app.yourMessage": "Mesajınız",
+  "app.contactUs": "Bize Ulaşın",
+  "app.contact": "İletişim",
+  "app.socialMedia": "Sosyal Medyalarımız",
+  "app.cardText1": "UI / UX Tasarımı",
+  "app.cardDesc1": "Kullanıcı dostu, dizayn standartlarına uygun ve en iyi kullanımı sunan dizaynlar yapıyoruz.",
+  "app.cardText2": "Mobil Uygulama",
+  "app.cardDesc2": "En üst seviye performans sunan, iOS ve Android platformları için en iyi uygulama çözümlerini sunuyoruz.",
+  "app.cardText3": "Web Siteleri",
+  "app.cardDesc3": "Uygulamanın ihtiyacı olan geliştirmelerini sağlıyoruz ve ile en iyi koordinasyonu kuruyoruz."
+}
