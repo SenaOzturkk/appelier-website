@@ -144,11 +144,9 @@ function Footer() {
       </div>
 
       <div class="footer-text">
-        <p> 0232 520 33 29 </p>
-        <p>Çınarlı Mahallesi 1572 Sokak No:33</p>
-        <p>
-          Withco Co-Working Space Ofis No: 319 PK.35170 Konak, İzmir, Türkiye
-        </p>
+        <p>0232 502 91 34</p>
+        <p>Kazimdirik Mahallesi 375 Sokak No:11/1</p>
+        <p>İzpek Trend Plaza No: 215 Bornova, İzmir, Türkiye</p>
       </div>
     </div>
   );
