@@ -27,7 +27,7 @@ function HeroSection() {
         <HoverVideoPlayer
           style={{ display: vidIndex === 0 ? "none" : "block" }}
           className="test"
-          videoSrc="/videos/loop.mp4"
+          videoSrc="/videos/loop2.mp4"
           muted
           loop
           ref={ref}
