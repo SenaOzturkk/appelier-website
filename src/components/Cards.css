@@ -92,7 +92,6 @@ h1 {
 
 .image__overlay {
   position: absolute;
-  top: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
   color: #ffff;
@@ -199,5 +198,14 @@ h1 {
   }
   .image__overlay > * {
     margin-top: 15px;
+  }
+  .image__description {
+    max-width: 180px !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .image__overlay {
+    top: 0;
   }
 }
