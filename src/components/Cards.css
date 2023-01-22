@@ -191,3 +191,13 @@ h1 {
   font-weight: bold;
   color: #e4c473;
 }
+
+@media only screen and (max-width: 1024px) {
+  .image__overlay {
+    height: 250px !important;
+    width: 300px !important;
+  }
+  .image__overlay > * {
+    margin-top: 15px;
+  }
+}
