@@ -21,6 +21,7 @@ function HeroSection() {
           style={{ display: vidIndex === 1 ? "none" : "block" }}
           src={videoIntro}
           autoPlay
+          playsInline
           muted
           onEnded={() => setVidIndex((idx) => idx + 1)}
         />
