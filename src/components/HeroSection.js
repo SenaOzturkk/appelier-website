@@ -30,6 +30,7 @@ function HeroSection() {
           className="test"
           videoSrc="/videos/loop2.mp4"
           muted
+          playsInline
           loop
           ref={ref}
           pausedOverlay={
