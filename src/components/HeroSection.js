@@ -34,7 +34,11 @@ function HeroSection() {
           playsInline
           loop
           ref={ref}
-          pausedOverlay={<div className="stoppedImage"></div>}
+          pausedOverlay={
+            <div className="stoppedImage">
+              <h1>.</h1>
+            </div>
+          }
         />
       </div>
     </>
