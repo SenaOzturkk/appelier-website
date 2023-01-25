@@ -77,5 +77,6 @@ video {
 @media screen and (max-width: 960px) {
   .stoppedImage {
     background: url("/src/images/mobile.jpeg") center center/cover no-repeat;
+    background-color: black;
   }
 }

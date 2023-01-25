@@ -3,6 +3,7 @@ import "../App.css";
 import "./HeroSection.css";
 import HoverVideoPlayer from "react-hover-video-player";
 import { useEffect, useState, useRef } from "react";
+import Mobile from "../images/mobile.jpeg";
 
 const videoIntro = "/videos/intro.mp4";
 
