@@ -26,6 +26,9 @@ function HeroSection() {
           muted
           onEnded={() => setVidIndex((idx) => idx + 1)}
         />
+        <picture>
+          <source media="(max-width:960px)" srcset="images/mobile.jpeg" />
+        </picture>
         <HoverVideoPlayer
           style={{ display: vidIndex === 0 ? "none" : "block" }}
           className="test"
@@ -34,11 +37,11 @@ function HeroSection() {
           playsInline
           loop
           ref={ref}
-          pausedOverlay={
+          /* pausedOverlay={
             <div className="stoppedImage">
               <h1>.</h1>
             </div>
-          }
+          }*/
         />
       </div>
     </>
