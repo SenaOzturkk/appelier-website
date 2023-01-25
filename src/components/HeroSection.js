@@ -33,13 +33,6 @@ function HeroSection() {
           playsInline
           loop
           ref={ref}
-          pausedOverlay={
-            <div className="test">
-              <div className="test2">
-                <h1>.</h1>
-              </div>
-            </div>
-          }
         />
       </div>
     </>
