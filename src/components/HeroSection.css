@@ -73,3 +73,9 @@ video {
 .test {
   width: 100%;
 }
+
+@media screen and (max-width: 960px) {
+  .stoppedImage {
+    background: url("/src/images/mobile.jpeg") center center/cover no-repeat;
+  }
+}
