@@ -4,7 +4,8 @@ import axios from "axios";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
-const contactUrl = "http://localhost:4000/contact";
+const contactUrl =
+  "https://t3nfvkt6jf.execute-api.us-east-1.amazonaws.com/prod/contact";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -19,31 +20,20 @@ function Footer() {
       return;
     }
     setAlert(null);
-    /* const requestConfig = {
+    const requestConfig = {
       headers: {
-        "x-api-key": "6pmXxWRCYh2XDWyHHBtgZ4becVR31hCLaBG1xs6a",
+        "x-api-key": "PoTol33x6e5FHms60xwu7O7Mh0m3RlC80S610nrf",
       },
-    };*/
+    };
     const requestBody = {
       name: name,
       email: email,
       message: message,
     };
-    axios
-      .post(contactUrl, requestBody)
-      .then((response) => {
-        setAlert("");
-      })
-      .catch((error) => {
-        if (
-          error.response.data.status === 401 ||
-          error.response.data.status === 403
-        ) {
-          setAlert(error.response.data.message);
-        } else {
-          setAlert(error.response.data.message);
-        }
-      });
+    axios.post(contactUrl, requestBody, requestConfig).then((response) => {
+      console.log(response);
+      setAlert("");
+    });
   };
 
   return (
